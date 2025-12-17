@@ -8,6 +8,13 @@ function Home() {
   const featured = articles[0];
   const others = articles.slice(1);
 
+  const [referrer, setReferrer] = useState("");
+
+  useEffect(() => {
+    setReferrer(document.referrer);
+  }, []);
+console.log(referrer ,'referrerreferrer');
+
   return (
     <div
       className="page"
@@ -15,7 +22,7 @@ function Home() {
         position: "relative",
       }}
     >
-      <a href="http://localhost:5173/" className="bg-[red] p-3">Go to my site here</a>
+    
 
       <section
         className="hero"
