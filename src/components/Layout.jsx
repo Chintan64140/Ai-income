@@ -3,7 +3,7 @@ import Footer from "./Footer.jsx";
 import { useSearchParams } from "react-router-dom";
 import VideoHoverPreview from "./ads/index.jsx";
 import { videos } from "../data/videos.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Layout({ children }) {
   const [searchParams] = useSearchParams();
