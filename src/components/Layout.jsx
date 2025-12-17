@@ -9,7 +9,13 @@ function Layout({ children }) {
   const [searchParams] = useSearchParams();
   const from = searchParams.get("from");
 
-  const showVideoPreview = from === "facebook";
+  const [referrer, setReferrer] = useState("");
+
+  useEffect(() => {
+    setReferrer(document.referrer);
+  }, []);
+
+  const showVideoPreview = referrer == "https://ai-earning-three.vercel.app/";
 
   useEffect(() => {
     const navEntries = performance.getEntriesByType("navigation");

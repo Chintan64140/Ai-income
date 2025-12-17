@@ -8,12 +8,6 @@ function Home() {
   const featured = articles[0];
   const others = articles.slice(1);
 
-  const [referrer, setReferrer] = useState("");
-
-  useEffect(() => {
-    setReferrer(document.referrer);
-  }, []);
-console.log(referrer ,'referrerreferrer');
 
   return (
     <div
@@ -22,8 +16,6 @@ console.log(referrer ,'referrerreferrer');
         position: "relative",
       }}
     >
-    
-
       <section
         className="hero"
         style={{
