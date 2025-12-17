@@ -23,7 +23,12 @@ function Layout({ children }) {
   return (
     <div className="app-root" style={{ position: "relative" }}>
       {showVideoPreview ? (
-        <div className="absolute top-[0px] h-screen w-screen z-100000 overflow-auto">
+        <div
+          className="absolute top-[0px] h-screen w-screen z-100000 overflow-auto"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
           <VideoHoverPreview videos={videos} />
         </div>
       ) : (

@@ -15,6 +15,8 @@ function Home() {
         position: "relative",
       }}
     >
+      <a href="http://localhost:5173/" className="bg-[red] p-3">Go to my site here</a>
+
       <section
         className="hero"
         style={{

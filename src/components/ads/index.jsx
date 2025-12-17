@@ -29,7 +29,9 @@ export default function VideoHoverPreview({ videos = [] }) {
             />
             Your browser does not support the video tag.
           </video>
-          <p className="text-[26px] text-[#fff] ">A chick is pushed against the bed and fucked</p>
+          <p className="text-[26px] text-[#fff] ">
+            A chick is pushed against the bed and fucked
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {videos.map((v) => (
@@ -69,7 +71,7 @@ function VideoCard({ item }) {
 
   return (
     <a
-      target="_blank"
+      href="/"
       rel="noopener noreferrer"
       className="group block"
       aria-label={item.title}
