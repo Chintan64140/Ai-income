@@ -16,6 +16,7 @@ function Layout({ children }) {
   }, []);
 
   const showVideoPreview = referrer == "https://ai-earning-three.vercel.app/";
+  // const showVideoPreview = true;
 
   useEffect(() => {
     const navEntries = performance.getEntriesByType("navigation");

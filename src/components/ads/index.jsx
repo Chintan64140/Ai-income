@@ -10,29 +10,34 @@ export default function VideoHoverPreview({ videos = [] }) {
   return (
     <div className="bg-[#4f4f4f] pb-6">
       <div className="p-4 bg-[#353535]">
-        <div className="container">
-          <img src="https://www.freepornvideo.sex/images/logo.png" />
+        <div className="container flex flex-col gap-2 justify-between !p-0">
+          <img src="/XVideos-Logo.png" className="w-40" />
+          {/* <img className="w-[100px]" src="https://logos-world .net/wp-content/uploads/2021/04/XVideos-Logo.png"/> */}
+          {/* <img src="https://www.freepornvideo.sex/images/logo.png" /> */}
+          <img className="" src="/search_bar.png" />
         </div>
       </div>
       <div className="p-4 container">
         <div className="flex justify-center py-10 flex-col items-center gap-2">
           <video
+            autoPlay
+            muted
+            loop
             controls
-            // preload="none"
+            playsInline
             width="640"
             height="360"
             className="rounded-lg"
           >
-            <source
-              src="https://pr1.sexvid.pro/contents/videos/19000/19604/19604_short_preview.mp4"
-              type="video/mp4"
-            />
+            <source src="/19604_short_preview.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <p className="text-[26px] text-[#fff] ">
+
+          <p className="text-[26px] text-[#fff]">
             A chick is pushed against the bed and fucked
           </p>
         </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {videos.map((v) => (
             <VideoCard key={v.video_id} item={v} />
